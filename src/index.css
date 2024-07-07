@@ -1,0 +1,31 @@
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.root {
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+} 
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
