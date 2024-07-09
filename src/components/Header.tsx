@@ -2,18 +2,15 @@ import React from 'react';
 import { Typography } from 'antd';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import type
 
 const { Title, Text } = Typography;
 
 type propsType = {
   title: string;
-  subTitle: string;
-  icon: string;
-
+  subtitle: string;
 };
 
-function Header({ title, subTitle }: propsType) {
+function Header({ title, subtitle }: propsType) {
   return (
     <div className="header">
       <div className="titles">
@@ -21,7 +18,7 @@ function Header({ title, subTitle }: propsType) {
           {title}
         </Title>
         <Text strong style={{ color: '#347173' }}>
-          {subTitle}
+          {subtitle}
         </Text>
       </div>
       <div className="button">

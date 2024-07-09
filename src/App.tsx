@@ -1,17 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import SideBar from './views/global/SideBar';
-import TopBar from './views/global/TopBar';
-import DashBoard from './views/dashboard';
-import Bar from './views/bar';
-import Calendar from './views/calendar';
-import Team from './views/team';
-import Contacts from './views/contacts';
-import Invoices from './views/invoices';
-import Form from './views/form';
-import Line from './views/line';
-import Pie from './views/pie';
-import Faq from './views/faq';
-import Geography from './views/geography';
+import SideBar from './pages/global/SideBar';
+import TopBar from './pages/global/TopBar';
+import DashBoard from './pages/dashboard';
+import Bar from './pages/bar';
+import Calendar from './pages/calendar';
+import Team from './pages/team';
+import Contacts from './pages/contacts';
+import Invoices from './pages/invoices';
+import Form from './pages/form';
+import Line from './pages/line';
+import Pie from './pages/pie';
+import Faq from './pages/faq';
+import Geography from './pages/geography';
 import './index.css';
 
 function App() {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom';
 import {
   HomeOutlined,
   TeamOutlined,
@@ -16,33 +17,41 @@ type MenuItem = Required<MenuProps>['items'][number];
 const { Title, Text } = Typography;
 
 const items: MenuItem[] = [
-  { key: '1', icon: <HomeOutlined />, label: 'DashBoard' },
+  { key: '/', icon: <HomeOutlined />, label: 'DashBoard' },
   {
     key: 'data',
     label: 'Data',
     children: [
-      { key: '21', label: 'Manage Team', icon: <TeamOutlined /> },
-      { key: '22', label: 'Contacts Information', icon: <ContactsOutlined /> },
-      { key: '23', label: 'Invoices Balances', icon: <TableOutlined /> },
+      { key: '/team', label: 'Manage Team', icon: <TeamOutlined /> },
+      {
+        key: '/contacts',
+        label: 'Contacts Information',
+        icon: <ContactsOutlined />,
+      },
+      { key: '/invoices', label: 'Invoices Balances', icon: <TableOutlined /> },
     ],
   },
   {
     key: 'pages',
     label: 'Pages',
     children: [
-      { key: '31', label: 'Profile Form', icon: <SettingOutlined /> },
-      { key: '32', label: 'Calendar', icon: <SettingOutlined /> },
-      { key: '33', label: 'FAQ Page', icon: <SettingOutlined /> },
+      { key: '/form', label: 'Profile Form', icon: <SettingOutlined /> },
+      { key: '/calendar', label: 'Calendar', icon: <SettingOutlined /> },
+      { key: '/faq', label: 'FAQ Page', icon: <SettingOutlined /> },
     ],
   },
   {
     key: 'charts',
     label: 'Charts',
     children: [
-      { key: '41', label: 'Bar Chart', icon: <SettingOutlined /> },
-      { key: '42', label: 'Pie Chart', icon: <SettingOutlined /> },
-      { key: '43', label: 'Geography Chart', icon: <SettingOutlined /> },
-      { key: '44', label: 'Line Chart', icon: <SettingOutlined /> },
+      { key: '/bar', label: 'Bar Chart', icon: <SettingOutlined /> },
+      { key: '/pie', label: 'Pie Chart', icon: <SettingOutlined /> },
+      {
+        key: '/geography',
+        label: 'Geography Chart',
+        icon: <SettingOutlined />,
+      },
+      { key: '/line', label: 'Line Chart', icon: <SettingOutlined /> },
     ],
   },
 ];
@@ -70,7 +79,8 @@ const getLevelKeys = (items1: LevelKeysProps[]) => {
 
 const levelKeys = getLevelKeys(items as LevelKeysProps[]);
 
-const App: React.FC = () => {
+const SideBar: React.FC = () => {
+  const navigate = useNavigate();
   const isMd = useMediaQuery({ query: '(max-width: 768px)' });
   const [collapsed, setCollapsed] = useState(false);
   const [stateOpenKeys, setStateOpenKeys] = useState(['2', '23']);
@@ -96,8 +106,8 @@ const App: React.FC = () => {
     }
   };
 
-  const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click ', e);
+  const onClick: MenuProps['onClick'] = ({ key }) => {
+    navigate(key);
   };
 
   const toggleHandler = () => {
@@ -139,4 +149,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default SideBar;
