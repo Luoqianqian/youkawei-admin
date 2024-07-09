@@ -2,12 +2,15 @@ import React from 'react';
 import { Typography } from 'antd';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
+import type
 
 const { Title, Text } = Typography;
 
 type propsType = {
   title: string;
   subTitle: string;
+  icon: string;
+
 };
 
 function Header({ title, subTitle }: propsType) {

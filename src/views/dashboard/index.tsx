@@ -1,6 +1,13 @@
 import React from 'react';
 import { Col, Row } from 'antd';
 import Header from '../../components/Header';
+import {
+  HomeOutlined,
+  LoadingOutlined,
+  SettingFilled,
+  SmileOutlined,
+  SyncOutlined,
+} from '@ant-design/icons';
 import './index.css';
 
 const DashBoard: React.FC = () => (
