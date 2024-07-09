@@ -4,11 +4,17 @@ body,
 .app {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.root {
+.app {
+  background: #141A28;
+  color: #DDDEE7;
   display: flex;
-  position: relative;
+}
+.content {
+  flex: 1;
 }
 
 ::-webkit-scrollbar {

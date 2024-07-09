@@ -1,0 +1,23 @@
+.sidebar {
+  min-height: 100vh;
+  background-color: #001529;
+}
+
+.side-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
