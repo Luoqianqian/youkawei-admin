@@ -9,15 +9,13 @@ function App() {
   return (
     <>
       <div className="app">
-        <Space>
-          <SideBar />
-          <main className="content">
-            <TopBar />
-            <Routes>
-              <Route path="/" element={<DashBoard />} />
-            </Routes>
-          </main>
-        </Space>
+        <SideBar />
+        <main className="content">
+          <TopBar />
+          <Routes>
+            <Route path="/" element={<DashBoard />} />
+          </Routes>
+        </main>
       </div>
     </>
   );
