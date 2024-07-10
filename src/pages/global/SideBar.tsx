@@ -123,12 +123,12 @@ const SideBar: React.FC = () => {
       {!collapsed && (
         <div className="side-top">
           <div className="header">
-            <Title level={2} style={{ color: '#C2CAD8' }}> ADMINS </Title>
+            <Title level={2}> ADMINS </Title>
             <MenuOutlined onClick={toggleHandler} />
           </div>
           <Avatar size={50} src="../../../public/pig.jpg" />
           <div className="texts">
-            <Text strong style={{ color: '#DEE4E9' }} > Luo Qianqian </Text>
+            <Text strong> Luo Qianqian </Text>
             <Text strong style={{ color: '#347173' }} > Admin </Text>
           </div>
         </div>
@@ -140,7 +140,6 @@ const SideBar: React.FC = () => {
         defaultOpenKeys={['data']}
         mode="inline"
         items={items}
-        theme="dark"
         inlineCollapsed={collapsed}
         openKeys={stateOpenKeys}
         onOpenChange={onOpenChange}

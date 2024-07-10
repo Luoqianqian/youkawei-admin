@@ -22,9 +22,7 @@ function Header({ title, subtitle }: propsType) {
       }}
     >
       <div className="app-header">
-        <Title style={{ color: '#DEE4E9' }} level={3}>
-          {title}
-        </Title>
+        <Title level={3}>{title}</Title>
         <Text strong style={{ color: '#347173' }}>
           {subtitle}
         </Text>

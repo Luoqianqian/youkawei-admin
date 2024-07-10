@@ -9,8 +9,7 @@ body,
 }
 
 .app {
-  background: #141A28;
-  color: #DDDEE7;
+  color: #141A28;
   display: flex;
 }
 .content {

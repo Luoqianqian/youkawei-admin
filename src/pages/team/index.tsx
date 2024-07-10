@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import { mockDataTeam } from '../../data/mockData.js';
-import { Table } from 'antd';
+import { Table, TableProps } from 'antd';
 
 type teamType = {
   id: number;
@@ -13,7 +13,8 @@ type teamType = {
 };
 
 const dataSource: teamType[] = mockDataTeam;
-const columns = [
+
+const columns: TableProps<teamType>['columns'] = [
   {
     title: 'ID',
     dataIndex: 'id',
@@ -50,7 +51,11 @@ function Team() {
   return (
     <div>
       <Header title="TEAM" subtitle="Managing the team member" />
-      <Table dataSource={dataSource} columns={columns} />
+      <Table
+        pagination={{ pageSize: 7 }}
+        dataSource={dataSource}
+        columns={columns}
+      />
     </div>
   );
 }
