@@ -10,7 +10,7 @@ import {
   MenuOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Avatar, Menu, Typography } from 'antd';
+import { Avatar, ConfigProvider, Menu, Typography } from 'antd';
 import './index.css';
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -86,7 +86,9 @@ const SideBar: React.FC = () => {
   const [stateOpenKeys, setStateOpenKeys] = useState(['2', '23']);
 
   const onOpenChange: MenuProps['onOpenChange'] = (openKeys) => {
-    const currentOpenKey = openKeys.find((key) => stateOpenKeys.indexOf(key) === -1);
+    const currentOpenKey = openKeys.find(
+      (key) => stateOpenKeys.indexOf(key) === -1,
+    );
     // open
     if (currentOpenKey !== undefined) {
       const repeatIndex = openKeys
@@ -123,13 +125,19 @@ const SideBar: React.FC = () => {
       {!collapsed && (
         <div className="side-top">
           <div className="header">
-            <Title level={2}> ADMINS </Title>
-            <MenuOutlined onClick={toggleHandler} />
+            <Title style={{ padding: 0, margin: 0 }} level={2}>
+              {' '}
+              ADMINS{' '}
+            </Title>
+            <MenuOutlined style={{ marginTop: 10 }} onClick={toggleHandler} />
           </div>
           <Avatar size={50} src="../../../public/pig.jpg" />
           <div className="texts">
             <Text strong> Luo Qianqian </Text>
-            <Text strong style={{ color: '#347173' }} > Admin </Text>
+            <Text strong style={{ color: '#347173' }}>
+              {' '}
+              Admin{' '}
+            </Text>
           </div>
         </div>
       )}

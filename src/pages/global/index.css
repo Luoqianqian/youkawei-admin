@@ -9,6 +9,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: start;
+    padding: 10px 0;
   }
   .texts {
     display: flex;
