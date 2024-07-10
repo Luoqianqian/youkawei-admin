@@ -12,7 +12,7 @@ import './index.css';
 
 const DashBoard: React.FC = () => (
   <>
-    <Header title="DASHBOARD" subTitle="welcome to your dashboard!" />
+    <Header title="DASHBOARD" subtitle="welcome to your dashboard!" />
     <Row>
       <Col span={6}>col-6</Col>
       <Col span={6}>col-6</Col>

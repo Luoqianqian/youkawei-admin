@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../../components/Header';
 import { mockDataTeam } from '../../data/mockData.js';
 import { Table, TableProps } from 'antd';
@@ -66,7 +66,7 @@ const columns: TableProps<teamType>['columns'] = [
           style={{
             width: 60,
             color: '#D6DCE3',
-            padding: '5px',
+            padding: '3px',
             display: 'flex',
             justifyContent: 'center',
             backgroundColor: '#369B7D',
@@ -84,9 +84,10 @@ function Team() {
     <div>
       <Header title="TEAM" subtitle="Managing the team member" />
       <Table
-        pagination={{ pageSize: 6 }}
+        pagination={{ pageSize: 10 }}
         dataSource={dataSource}
         columns={columns}
+        size="small"
       />
     </div>
   );
