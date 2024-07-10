@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from 'antd';
+import { ConfigProvider, Typography } from 'antd';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 
@@ -12,8 +12,16 @@ type propsType = {
 
 function Header({ title, subtitle }: propsType) {
   return (
-    <div className="header">
-      <div className="titles">
+    <ConfigProvider
+      theme={{
+        components: {
+          Typography: {
+            titleMarginBottom: 0,
+          },
+        },
+      }}
+    >
+      <div className="app-header">
         <Title style={{ color: '#DEE4E9' }} level={3}>
           {title}
         </Title>
@@ -21,13 +29,7 @@ function Header({ title, subtitle }: propsType) {
           {subtitle}
         </Text>
       </div>
-      <div className="button">
-        <Button type="primary">
-          <DownloadOutlined />
-          <span>DOWNLOAD REPORTS</span>
-        </Button>
-      </div>
-    </div>
+    </ConfigProvider>
   );
 }
 
