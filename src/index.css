@@ -79,6 +79,10 @@ body,
 .calendar-content .table {
   flex: 1;
 }
+/* page-faq */
+.faq-accordion {
+  background-color: #fff;
+}
 
 ::-webkit-scrollbar {
   width: 10px;

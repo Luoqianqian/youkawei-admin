@@ -10,7 +10,7 @@ import Invoices from './pages/invoices';
 import Form from './pages/form';
 import Line from './pages/line';
 import Pie from './pages/pie';
-import Faq from './pages/faq';
+import FAQ from './pages/faq';
 import Geography from './pages/geography';
 import './index.css';
 
@@ -31,7 +31,7 @@ function App() {
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
-              <Route path="/faq" element={<Faq />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
             </Routes>

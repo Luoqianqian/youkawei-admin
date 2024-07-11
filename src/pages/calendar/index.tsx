@@ -3,7 +3,6 @@ import {
   EventApi,
   DateSelectArg,
   EventClickArg,
-  EventContentArg,
   formatDate,
 } from '@fullcalendar/core';
 import FullCalendar from '@fullcalendar/react';
@@ -15,10 +14,6 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 import { Typography } from 'antd';
 
 const { Title, Text } = Typography;
-interface DemoAppState {
-  weekendsVisible: boolean;
-  currentEvents: EventApi[];
-}
 
 export default function Calendar() {
   const [currentEvents, setCurrentEvents] = useState<EventApi[]>([]);
