@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, ErrorMessage, Field} from 'formik';
+import { Formik, ErrorMessage, Field } from 'formik';
 import { Col, Input, Row } from 'antd';
 import * as yup from 'yup';
 
@@ -41,7 +41,7 @@ function Form() {
         {({ values, handleBlur, handleChange }) => (
           <form>
             <Row className="row">
-              <Col span={24}>
+              <Col push={1} span={23}>
                 <Field
                   as={Input}
                   onBlur={handleBlur}
@@ -54,7 +54,7 @@ function Form() {
               </Col>
             </Row>
             <Row className="row">
-              <Col span={24}>
+              <Col push={1} span={23}>
                 <Field
                   as={Input}
                   onBlur={handleBlur}
@@ -67,7 +67,7 @@ function Form() {
               </Col>
             </Row>
             <Row className="row">
-              <Col span={24}>
+              <Col push={1} span={23}>
                 <Field
                   as={Input}
                   onBlur={handleBlur}
@@ -80,7 +80,7 @@ function Form() {
               </Col>
             </Row>
             <Row className="row">
-              <Col span={24}>
+              <Col push={1} span={23}>
                 <Field
                   as={Input}
                   onBlur={handleBlur}

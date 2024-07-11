@@ -147,6 +147,12 @@ const SideBar: React.FC = () => {
           </div>
         </div>
       )}
+      {collapsed && (
+        <MenuOutlined
+          style={{ marginTop: 10, marginLeft: 22 }}
+          onClick={toggleHandler}
+        />
+      )}
       <Menu
         onClick={onClick}
         style={{ width: collapsed ? 60 : 216 }}

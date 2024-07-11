@@ -18,23 +18,25 @@ body,
   height: 100%;
   flex: 1;
 }
-.routes {
-  background-color: #D6DCE3;
-}
 .app-header {
   display: flex;
   flex-direction: column;
   justify-content: start;
   margin-bottom: 18px;
   padding: 0 8px;
+  background-color: #141A28;
 }
 
-/* form */
+/* page-team */
+.team-table {
+  background-color: #fafafa;
+  padding: 0 20px;
+}
+
+/* page-form */
 .page-form {
-  background-color: #D6DCE3;
-  padding: 10px;
   .row {
-    margin-bottom: 16px;
+    margin-bottom: 26px;
     width: 80%;
   }
   .msg {
@@ -48,8 +50,36 @@ body,
     border: none;
     font-size: 12px;
     font-weight: 500;
+    width: 100%;
   }
 }
+/* page-calendar */
+.page-calendar {
+  background-color: #141A28;
+  padding: 5px 15px;
+}
+.calendar-content {
+  display: flex;
+}
+.calendar-content .events {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1B2537;
+  margin-right: 15px;
+  padding: 15px;
+  .event {
+    background-color: #41C7A1;
+    border-radius: 5px;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.calendar-content .table {
+  flex: 1;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -66,7 +66,7 @@ const columns: TableProps<teamType>['columns'] = [
           style={{
             width: 60,
             color: '#D6DCE3',
-            padding: '3px',
+            padding: '3px 10px',
             display: 'flex',
             justifyContent: 'center',
             backgroundColor: '#369B7D',
@@ -83,12 +83,14 @@ function Team() {
   return (
     <div>
       <Header title="TEAM" subtitle="Managing the team member" />
-      <Table
-        pagination={{ pageSize: 10 }}
-        dataSource={dataSource}
-        columns={columns}
-        size="small"
-      />
+      <div className="team-table">
+        <Table
+          pagination={{ pageSize: 8 }}
+          dataSource={dataSource}
+          columns={columns}
+          size="small"
+        />
+      </div>
     </div>
   );
 }
