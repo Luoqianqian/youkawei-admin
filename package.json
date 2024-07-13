@@ -17,6 +17,7 @@
     "@fullcalendar/timegrid": "^6.1.14",
     "@nivo/bar": "^0.87.0",
     "@nivo/core": "^0.87.0",
+    "@nivo/line": "^0.87.0",
     "antd": "^5.19.1",
     "apexcharts": "^3.50.0",
     "formik": "^2.4.6",
