@@ -84,6 +84,8 @@ body,
   background-color: #fff;
 }
 
+/* page-bar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
